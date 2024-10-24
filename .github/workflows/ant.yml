@@ -21,6 +21,6 @@ jobs:
     # - name: poc
     #   run: java -version
     - name: poc1
-      run: echo $env:HOMEPATH
+      run: Write-Output $env:HOMEPATH
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
