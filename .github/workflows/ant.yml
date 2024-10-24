@@ -18,9 +18,9 @@ jobs:
     #   with:
     #     java-version: '21'
     #     distribution: 'temurin'
-    # - name: poc
-    #   run: java -version
     - name: poc1
       run: Write-Output $env:HOMEPATH
+    - name: poc2
+      run: java -version
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
