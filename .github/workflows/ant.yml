@@ -20,5 +20,7 @@ jobs:
         distribution: 'temurin'
     - name: poc
       run: java -version
+    - name: poc1
+      run: echo $env:HOMEPATH
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
