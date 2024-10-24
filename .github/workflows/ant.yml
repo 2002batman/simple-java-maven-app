@@ -22,6 +22,8 @@ jobs:
       run: Write-Output $env:PATH
     - name: poc1a
       run: Write-Output $env
+    - name: poc1b
+      run: Write-Output $GITHUB_WORKSPACE
     - name: poc2
       run: java -version
     - name: poc2a
