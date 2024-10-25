@@ -27,11 +27,13 @@ jobs:
       run: |
         java -version
         mvn -v
-    - name: poc3
+    - name: mount drive
       ## net use may give an error
       continue-on-error: true
       run: |
         net use U: \\VBOXSVR\proj.HKICL-CMUNP /persistent:no
+    - name: poc3
+      run: |
         dir u:\
         dir
     - name: checkout
