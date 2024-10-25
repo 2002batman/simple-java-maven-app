@@ -51,11 +51,11 @@ jobs:
         git config --global --add safe.directory "*"
         git clone u:\proj.HKICL-CMUNP.src\iclcmu_scp
         dir
-    - name: setup-github
-      run: |
-        .\iclcmu_scp\build\github\setup-github.ps1
+    # - name: setup-github
+    #   run: |
+    #     .\iclcmu_scp\build\github\setup-github.ps1
     - name: bash
       run: |
-        bash -c 'echo hello world'
+        bash ./iclcmu_scp/build/github/setup-github.sh
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
