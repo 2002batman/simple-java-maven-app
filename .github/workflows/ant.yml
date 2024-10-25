@@ -36,9 +36,14 @@ jobs:
       run: |
         dir u:\
         dir
-    - name: checkout
-      uses: actions/checkout@v4
-      with:
-        repository: u:\proj.HKICL-CMUNP.src\iclcmu_scp
+    # - name: checkout
+    #   uses: actions/checkout@v4
+    #   with:
+    #     repository: u:\proj.HKICL-CMUNP.src\iclcmu_scp
+    - name: checkout2
+      run: |
+        git clone u:\proj.HKICL-CMUNP.src\iclcmu_scp
+        dir
+        
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
