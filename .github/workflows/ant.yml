@@ -40,7 +40,7 @@ jobs:
         dir        
     - name: cleanup
       run: |
-        rm -Recurse ${{github.workspace}}\*
+        rm -Recurse -Force ${{github.workspace}}\*
         dir
     # - name: checkout
     #   uses: actions/checkout@v4
