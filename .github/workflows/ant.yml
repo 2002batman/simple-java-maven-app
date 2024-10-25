@@ -28,6 +28,8 @@ jobs:
         java -version
         mvn -v
     - name: poc3
+      ## net use may give an error
+      continue-on-error: true
       run: |
         net use U: \\VBOXSVR\proj.HKICL-CMUNP /persistent:no
         dir u:\
