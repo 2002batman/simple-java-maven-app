@@ -42,6 +42,7 @@ jobs:
     #     repository: u:\proj.HKICL-CMUNP.src\iclcmu_scp
     - name: checkout2
       run: |
+        git config --global --add safe.directory "*"
         git clone u:\proj.HKICL-CMUNP.src\iclcmu_scp
         dir
         
