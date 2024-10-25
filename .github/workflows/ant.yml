@@ -31,5 +31,10 @@ jobs:
       run: |
         net use U: \\VBOXSVR\proj.HKICL-CMUNP /persistent:no
         dir u:\
+        dir
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        repository: u:\proj.HKICL-CMUNP.src\iclcmu_scp
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
