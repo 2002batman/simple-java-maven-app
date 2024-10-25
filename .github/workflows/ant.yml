@@ -19,16 +19,17 @@ jobs:
     #     java-version: '21'
     #     distribution: 'temurin'
     - name: poc1
-      run: Write-Output $env:PATH
-    - name: poc1a
-      run: Write-Output $env
-    - name: poc1b
-      run: Write-Output $GITHUB_WORKSPACE
+      run: |
+        Write-Output $env:PATH
+        Write-Output $env
+        Write-Output $GITHUB_WORKSPACE
     - name: poc2
-      run: java -version
-    - name: poc2a
-      run: mvn -v
+      run: |
+        java -version
+        mvn -v
     - name: poc3
-      run: dir u:\
+      run: |
+        net use U: \\VBOXSVR\proj.HKICL-CMUNP /persistent:no
+        dir u:\
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
