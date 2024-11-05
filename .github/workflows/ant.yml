@@ -54,8 +54,11 @@ jobs:
     # - name: setup-github
     #   run: |
     #     .\iclcmu_scp\build\github\setup-github.ps1
-    - name: bash
+    - name: setup-github
       run: |
         bash ./iclcmu_scp/build/github/setup-github.sh
+    - name: ant
+      run: |
+        ant -f iclcmu_scp\build\buildCmu\main.xml
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
