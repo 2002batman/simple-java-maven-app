@@ -59,6 +59,9 @@ jobs:
         bash ./iclcmu_scp/build/github/setup-github.sh
     - name: ant
       run: |
-        ant -debug -f iclcmu_scp\build\buildCmu\main.xml
+        ant -debug \
+          -f iclcmu_scp\build\buildCmu\main.xml \
+          -DworkspaceRoot=${{github.workspace}} \
+          -v
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
