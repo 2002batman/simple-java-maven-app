@@ -18,17 +18,18 @@ jobs:
     #   with:
     #     java-version: '21'
     #     distribution: 'temurin'
-    - name: poc1
+    - name: env info
       run: |
         Write-Output $env:PATH
         Write-Output $env
         Write-Output $GITHUB_WORKSPACE
         Write-Output $GITHUB_REPOSITORY
         Write-Output $GITHUB_REPOSITORY_OWNER
-    - name: poc2
+    - name: java info
       run: |
         java -version
         mvn -v
+        ant -v
     - name: mount drive
       ## net use may give an error
       continue-on-error: true
@@ -42,11 +43,11 @@ jobs:
       run: |
         rm -Recurse -Force ${{github.workspace}}\*
         dir
-    - name: checkout-self
+    - name: checkout self
       uses: actions/checkout@v4
       with: 
         path: ${{ github.event.repository.name }}
-    - name: checkout2
+    - name: checkout others
       run: |
         git config --global --add safe.directory "*"
         git clone u:\proj.HKICL-CMUNP.src\iclcmu_scp
@@ -58,7 +59,7 @@ jobs:
       run: |
         bash ./iclcmu_scp/build/github/setup-github.sh
     - name: ant
-      run: >
+      run: >-
         ant -debug 
           -f iclcmu_scp\build\buildCmu\main.xml 
           -DworkspaceRoot=${{github.workspace}} 
