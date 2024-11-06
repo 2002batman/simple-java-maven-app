@@ -61,7 +61,7 @@ jobs:
     - name: ant
       run: >-
         ant -debug 
-          -f iclcmu_scp\build\buildCmu\main.xml 
-          -DworkspaceRoot=${{github.workspace}} 
+        -f iclcmu_scp\build\buildCmu\main.xml 
+        -DworkspaceRoot=${{github.workspace}} 
     # - name: Build with Ant
     #   run: ant -noinput -buildfile build.xml
