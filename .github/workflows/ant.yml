@@ -51,6 +51,7 @@ jobs:
       run: |
         git config --global --add safe.directory "*"
         git clone u:\proj.HKICL-CMUNP.src\iclcmu_scp
+        git clone u:\proj.HKICL-CMUNP.src\hkicl-core
         dir
     - name: setup-github
       run: |
